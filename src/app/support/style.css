@@ -1,0 +1,11 @@
+.bg-contact {
+    background-image: url('/images/8d3f04f215ecdd21ca7f674cdfe61b16.png');
+}
+
+.round{
+    border-radius: 40px;
+}
+
+.contact-form{
+    border-radius: 20px;
+}
