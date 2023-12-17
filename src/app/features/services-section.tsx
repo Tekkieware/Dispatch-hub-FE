@@ -4,7 +4,7 @@ import Image from "next/image";
 export const ServicesSection = () => {
   return (
     <div className="py-14 px-5 lg:px-16">
-      <p className="text-[#0F0E0E] text-center text-[40px] font-extrabold leading-[45px]">
+      <p className="text-[#0F0E0E] text-center text-[30px] lg:text-[40px] font-extrabold leading-[45px]">
         Our Services
       </p>
 

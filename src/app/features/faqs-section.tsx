@@ -12,6 +12,8 @@ export const FaqsSection = ({ items }: Props) => {
       </p>
 
       <div className="w-[90%] lg:w-[80%] mt-5">
+        {items.length > 0
+        ?
         <Accordion>
           {items.map(({ description, title }, index) => (
             <AccordionItem
@@ -34,6 +36,13 @@ export const FaqsSection = ({ items }: Props) => {
             />
           ))}
         </Accordion>
+        :
+        <div className="text-center shadow-[0px_4px_12px_0px_rgba(0,0,0,0.10)] px-3 py-3.5 rounded-lg bg-gray-light cursor-pointer">
+        <p className="text-[red] text-md md:text-xl not-italic font-semibold">
+          Sorry, your search term does not match any questions, use the contact form below.
+          </p>
+          </div>
+            }
       </div>
     </div>
   );

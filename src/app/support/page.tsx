@@ -1,4 +1,5 @@
-import React, { Fragment } from "react";
+"use client"
+import React, { Fragment, useState } from "react";
 import {
   AboutUsSection,
   DownloadSection,
@@ -8,12 +9,33 @@ import {
 } from "../features";
 import { HeroSection } from "./features";
 import ContactSection from "./features/contact-section";
+import { HeroWrapper } from "@/components/hero-wrapper";
 
 export default function Support() {
+  interface Question{
+    title : string,
+    description: string
+  }
+ 
+ const [items, setItems] = useState<Question[]>(list)
+ 
+ const filter = (input: string) => {
+setItems(list.filter((question)=> question.title.toLocaleLowerCase().includes(input.toLocaleLowerCase())))
+ }
   return (
     <Fragment>
       <Navbar />
-      <HeroSection />
+      <HeroWrapper className="bg-support-hero bg-center">
+      <div className="w-[80%] my-auto flex flex-col items-center">
+        <h1 className=" text-white text-center text-4xl font-bold leading-[50px]">
+          How can we help you?
+        </h1>
+
+        <div className="bg-white rounded-full p-1.5 my-5 lg:w-[50%]">
+          <input onChange={((e) => filter(e.target.value))} type="text" className="border-0 outline-none bg-transparent px-2 w-full" placeholder="Search here" />
+        </div>
+      </div>
+    </HeroWrapper>
 
       <FaqsSection items={items} />
 
@@ -25,7 +47,7 @@ export default function Support() {
   );
 }
 
-const items = [
+const list = [
   {
     title: "How do I book or schedule a delivery through Dispatch Hub?",
     description:
