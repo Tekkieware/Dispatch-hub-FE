@@ -1,10 +1,15 @@
+"use client"
+import {useState} from 'react'
 import { Accordion, AccordionItem } from "@/components/accordion";
-import { AddIcon } from "@/components/icons";
+import { AddIcon, CloseIcon} from "@/components/icons";
 
 type Props = {
   items: { title: string; description: string }[];
 };
 export const FaqsSection = ({ items }: Props) => {
+
+  const [active, setActive] = useState<number>()
+
   return (
     <div className="py-14 flex flex-col justify-center items-center">
       <p className="text-[#0F0E0E] text-center text-[40px] font-extrabold leading-[45px]">
@@ -25,12 +30,17 @@ export const FaqsSection = ({ items }: Props) => {
                 </div>
               }
               trigger={
-                <div className="flex justify-between items-center shadow-[0px_4px_12px_0px_rgba(0,0,0,0.10)] px-3 py-3.5 rounded-lg bg-gray-light cursor-pointer">
+                <div onClick={(() =>active == index ? setActive(-1) : setActive(index))} className="flex justify-between items-center shadow-[0 px_4px_12px_0px_rgba(0,0,0,0.10)] px-3 py-3.5 rounded-lg bg-gray-light cursor-pointer">
                   <p className="text-black text-md md:text-xl not-italic font-semibold">
                     {title}
                   </p>
 
+                  {
+                    active == index ?
+                    <CloseIcon className="h-10 md:h-6 w-10 md:w-6" />
+                    :
                   <AddIcon className="h-10 md:h-6 w-10 md:w-6" />
+                }
                 </div>
               }
             />

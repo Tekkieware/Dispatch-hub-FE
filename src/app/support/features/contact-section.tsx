@@ -21,6 +21,7 @@ const ContactSection = () => {
                         <label className='font-bold'>MESSAGE:</label><br/>
                         <textarea rows={5} className='w-[100%] my-5 rounded-lg p-2 bg-[#F3F3F3] border-2 border-#D9D9D900' placeholder='WRITE YOUR MASSAGE HERE' />
                         </form>
+                        <Button type='submit' className='bg-black'>Send</Button>
                     </div>
                     </div>
 
