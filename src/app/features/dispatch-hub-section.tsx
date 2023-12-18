@@ -63,7 +63,7 @@ export const DispatchHubSection = () => {
 
         </div>
         <div className="h-[300px] md:h-[386px] rounded-3xl overflow-hidden">
-          <Image
+          <img
             src={active =="dispatch" ? "/images/3adcbed1de65504be63ae379b4200276.png" : "/images/truck.png"}
             alt=""
             width={300}

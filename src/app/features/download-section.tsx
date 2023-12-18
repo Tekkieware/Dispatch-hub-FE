@@ -8,11 +8,11 @@ export const DownloadSection = (props: Props) => {
     <div className="h-[500px] w-full bg-download bg-no-repeat bg-cnter my-10 bg-[250px_-100px]">
       <div className="h-full w-full bg-primary/80 flex justify-center items-end overflow-hidden gap-8">
         <div className="hidden lg:block border-[10px] rounded-xl border-black -mb-[50px] h-[450px]">
-          <Image
+          <img
             src="/images/839eafc011728e8bb2e97ee3e25f4088.png"
             alt=""
             className="hidden lg:block"
-            width={300}
+            width={300} 
             height={226}
           />
         </div>

@@ -33,7 +33,7 @@ const Card = (props: CardProps) => {
         className
       )}
     >
-      <Image src={image} alt="" width={150} height={191} className="" />
+      <img src={image} alt="" width={150} height={191} className="" />
       <div className="">
         <p className="text-black text-xl font-josefin-sans font-bold">{title}</p>
         <p className=" self-stretch text-black text-lg font-light">

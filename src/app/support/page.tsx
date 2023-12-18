@@ -18,8 +18,10 @@ export default function Support() {
   }
  
  const [items, setItems] = useState<Question[]>(list)
+ const [input, setInput] = useState<string>("")
  
  const filter = (input: string) => {
+  setInput(input)
 setItems(list.filter((question)=> question.title.toLocaleLowerCase().includes(input.toLocaleLowerCase())))
  }
   return (
@@ -31,9 +33,19 @@ setItems(list.filter((question)=> question.title.toLocaleLowerCase().includes(in
           How can we help you?
         </h1>
 
-        <div className="bg-white rounded-full p-1.5 my-5 lg:w-[50%]">
+        <div className="bg-white rounded-full p-1.5 lg:w-[50%]">
           <input onChange={((e) => filter(e.target.value))} type="text" className="border-0 outline-none bg-transparent px-2 w-full" placeholder="Search here" />
         </div>
+        { items.length > 0 && 
+        input &&
+        <div className="bg-white rounded p-1.5 lg:w-[50%]">
+        <ul>
+            {items.map((item, index) => (
+              <li key={index}>{item.title}</li>
+            ))}
+          </ul>
+        </div>
+        }
       </div>
     </HeroWrapper>
 

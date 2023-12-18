@@ -21,7 +21,7 @@ export const Navbar = () => {
           href="/"
           className="p-4"
         >
-          <Image 
+          <img 
           src={"/images/logo.png"} 
           width={70} 
           height={50}
