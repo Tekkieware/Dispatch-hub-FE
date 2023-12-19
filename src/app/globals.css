@@ -13,3 +13,7 @@ body {
 .bg-about {
   background-image: url('/images/bg-about.png');
 }
+
+.round-search{
+  border-radius: 20px;
+}

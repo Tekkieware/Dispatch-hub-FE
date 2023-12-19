@@ -9,7 +9,7 @@ export const DispatchHubSection = () => {
   return (
     <section className="py-14 px-5 lg:px-16">
       <div className="float-right lg:p-5 lg:m-5">
-        <Image alt="headphone" width={50} height={50} src="/images/headphone.png" />
+        <img alt="headphone" width={50} height={50} src="/images/headphone.png" />
       </div>
       <div className="pt-5">
         <h1 className="capitalize text-center text-2xl lg:text-3xl font-bold leading-[50px]">
@@ -17,8 +17,8 @@ export const DispatchHubSection = () => {
         </h1>
       </div>
       <div className="flex-col text-center mt-5">
-        <Button size="sm" onClick={(() => setActive("dispatch"))} className={active == "dispatch" ? "mx-2" : "mx-2 text-black bg-white border-2 border-black"} >Dispatch</Button>
-        <Button size="sm" onClick={(() => setActive("vehicle"))} className={active == "vehicle" ? "mx-2" : "mx-2 text-black bg-white border-2 border-black"} >Vehicle owner</Button>
+        <Button size="sm" onClick={(() => setActive("dispatch"))} className={active == "dispatch" ? "mx-2" : "mx-2 text-black bg-white border-2"} >Courier</Button>
+        <Button size="sm" onClick={(() => setActive("vehicle"))} className={active == "vehicle" ? "mx-2" : "mx-2 text-black bg-white border-2"} >Vehicle Owner</Button>
       </div>
 
       <div className="grid grid-col-1 lg:grid-cols-2 gap-5 py-14">

@@ -33,7 +33,7 @@ setItems(list.filter((question)=> question.title.toLocaleLowerCase().includes(in
           How can we help you?
         </h1>
 
-        <div className="bg-white rounded p-1.5 lg:w-[50%] text-[17px]">
+        <div className="bg-white round-search p-1.5 lg:w-[50%] text-[17px]">
           <input onChange={((e) => filter(e.target.value))} type="text" className="border-0 outline-none bg-transparent px-2 w-full" placeholder="Search here" />
           { items.length > 0 && 
         input &&   
