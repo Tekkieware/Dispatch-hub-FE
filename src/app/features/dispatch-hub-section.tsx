@@ -2,15 +2,21 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 
 export const DispatchHubSection = () => {
   const [active, setActive] = useState<string>("dispatch");
   return (
     <section className="py-14 px-5 lg:px-16">
+      <Link
+          href="/support"
+          className="p-4"
+        >
       <div className="float-right lg:p-5 lg:m-5">
         <img alt="headphone" width={50} height={50} src="/images/headphone.png" />
       </div>
+      </Link>
       <div className="pt-5">
         <h1 className="capitalize text-center text-2xl lg:text-3xl font-bold leading-[50px]">
           Earn With Dispatch Hub

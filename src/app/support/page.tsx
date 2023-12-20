@@ -34,12 +34,12 @@ setItems(list.filter((question)=> question.title.toLocaleLowerCase().includes(in
         </h1>
 
         <div className="bg-white round-search p-1.5 lg:w-[50%] text-[17px]">
-          <input onChange={((e) => filter(e.target.value))} type="text" className="border-0 outline-none bg-transparent px-2 w-full" placeholder="Search here" />
+          <input onChange={((e) => filter(e.target.value))} value={input} type="text" className="border-0 outline-none bg-transparent px-2 w-full" placeholder="Search here" />
           { items.length > 0 && 
         input &&   
         <ul className="p-2 text-[17px]">
             {items.map((item, index) => (
-              <li key={index}>{item.title}</li>
+              <li className="hover:bg-gray-light hover:font-bold" onClick={(() => setInput(item.title))} key={index}>{item.title}</li>
             ))}
           </ul>
         }
