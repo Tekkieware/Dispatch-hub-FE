@@ -7,3 +7,4 @@ export * from "./linkedin-icon";
 export * from "./c-icon";
 export * from "./add-icon";
 export * from "./close-icon";
+export * from './search-icon';

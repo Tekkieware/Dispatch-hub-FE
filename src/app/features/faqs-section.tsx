@@ -1,7 +1,7 @@
 "use client"
 import {useState} from 'react'
 import { Accordion, AccordionItem } from "@/components/accordion";
-import { AddIcon, CloseIcon} from "@/components/icons";
+import { AddIcon, CloseIcon, SearchIcon} from "@/components/icons";
 
 type Props = {
   items: { title: string; description: string }[];

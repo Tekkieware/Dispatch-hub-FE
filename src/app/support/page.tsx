@@ -10,6 +10,7 @@ import {
 import { HeroSection } from "./features";
 import ContactSection from "./features/contact-section";
 import { HeroWrapper } from "@/components/hero-wrapper";
+import {SearchIcon} from '../../components/icons/search-icon'
 
 export default function Support() {
   interface Question{
@@ -33,8 +34,9 @@ setItems(list.filter((question)=> question.title.toLocaleLowerCase().includes(in
           How can we help you?
         </h1>
 
-        <div className="bg-white round-search p-1.5 lg:w-[50%] text-[17px]">
+        <div className={input == "" ? "bg-white round-search p-1.5 lg:w-[50%] text-[17px] flex" : "bg-white round-search p-1.5 lg:w-[50%] text-[17px]"}>
           <input onChange={((e) => filter(e.target.value))} value={input} type="text" className="border-0 outline-none bg-transparent px-2 w-full" placeholder="Search here" />
+          {input == "" && <SearchIcon className="flex float-right" />}
           { items.length > 0 && 
         input &&   
         <ul className="p-2 text-[17px]">
